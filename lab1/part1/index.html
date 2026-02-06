@@ -9,29 +9,45 @@ A very brief description of the file
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <address class="sender-column">
+    <style>
+    body {
+    font: 1.2em / 1.5 system-ui;
+    }
+
+    .sender-column {
+    text-align: right;
+    }
+
+    h1 {
+    font-size: 1.5em;
+    }
+
+    h2 {
+    font-size: 1.3em;
+    }
+    </style>
 </head>
-<p>
+<body>
+<address class="sender-column">
 <strong> Dr. Eleanor Gaye</strong><br>
-Awesome Science faculty
-University of Awesome
-Bobtown, CA 99999,
-USA
-<strong>Tel:</strong> 123-456-7890
-<strong>Email:</strong> no_reply@example.com
+Awesome Science faculty<br>
+University of Awesome<br>
+Bobtown, CA 99999,<br>
+USA<br>
+<strong>Tel:</strong> 123-456-7890<br>
+<strong>Email:</strong> no_reply@example.com<br>
     </p>
 </address>
 
 <p class="sender-column">
     <time datetime="2023-09-10">10 September 2023</time>
+</p>
 
 <address>
-<p>
-<strong> Eileen Dover</strong>
-4321 Cliff Top Edge
-Dover, CT9 XXX
-UK
-</p>
+<strong> Eileen Dover</strong><br>
+4321 Cliff Top Edge<br>
+Dover, CT9 XXX<br>
+UK<br>
 </address>
 
 <h1><strong>Re: Eileen Dover university application </strong></h1>
@@ -48,9 +64,9 @@ UK
     semester; the start dates for each one are as follows: </p>
 
     <ul>
-        <li>First semester: 9 September 2016</li>
-        <li>Second semester: 15 January 2017</li>
-        <li>Third semester: 2 May 2017</li>
+        <li>First semester: <time datetime="2016-09-09">9 September 2016</time></li>
+        <li>Second semester: <time datetime="2017-01-15">15 January 2017</time></li>
+        <li>Third semester: <time datetime="2017-05-02">2 May 2017</time></li>
     </ul>
 
     <p>Please let me know if this is ok, and if so which start date you would prefer. </p>
@@ -65,7 +81,7 @@ UK
     <ol>
         <li>Turning H<sub>2</sub>O into wine, and the health benefits of Resveratrol (C<sub></sub>14<sub></sub>H<sub>12</sub>O<sub></sub>3<sub></sub>).</li>
         <li>Measuring the effect on performance of funk bass players at temperatures exceeding 30°C (86°F), when the audience size exponentially increases (effect of 3 × 10<sup>3</sup> increasing to 3 × 10<sup>4</sup>)</li>
-        <li>HTML, Hypertext Markup Language, and CSS, Cascading Style Sheets, constructs for representing musical scores. </li>
+        <li><abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> constructs for representing musical scores. </li>
     </ol>
 
     <p>So please can you provide more information on each of these subjects, 
@@ -81,7 +97,7 @@ UK
          <dl>
 
         <dt>Polynesian chicken dance<dt>
-            <dd>     A little known but very influential dance dating back as far as 300 BCE, 
+            <dd>     A little known but very influential dance dating back as far as 300 <abbr title="Before Common Era">BCE</abbr>, 
                     a whole village would dance around in a circle like chickens, to encourage 
                     their livestock to be "fruitful". </dd>
         <dt>Icelandic brownian shuffle</dt>
@@ -99,4 +115,4 @@ UK
 
         <p>Dr Eleanor Gaye</p>
         
-        <p> University of Awesome motto: "Be awesome to each other." <em>-- The memoirs of Bill S Preston, <abbr title= Esquire >Esq</abbr> </em> 
+        <p> University of Awesome motto: "Be awesome to each other." <cite>-- The memoirs of Bill S Preston, <abbr title="Esquire">Esq.</abbr> </cite> 

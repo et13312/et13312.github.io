@@ -1,5 +1,21 @@
 /* General setup */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
+/* Fonts */
+html {
+font-family: 'Montserrat', serif; 
+}
+
+h1{
+font-family: 'Bungee', serif; 
+}
+
+h2{
+font-family: 'Bungee', serif; 
+}
+
+/* Boxes */
 * {
   box-sizing: border-box;
 }
@@ -24,6 +40,7 @@ main {
 
 header {
   border-bottom: 5px solid #aa6666;
+
 }
 
 footer {

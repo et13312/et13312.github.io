@@ -57,3 +57,13 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+/* Link Styling */
+
+a:focus, a:hover{
+color: gainsboro;
+text-decoration: none;
+outline: none;
+}
+

@@ -5,14 +5,19 @@
 /* Fonts */
 html {
 font-family: 'Montserrat', serif; 
+letter-spacing: 0.5;
 }
 
 h1{
 font-family: 'Bungee', serif; 
+text-align: center;
+letter-spacing: -1.5;
 }
 
 h2{
 font-family: 'Bungee', serif; 
+margin-bottom: 0;
+letter-spacing: -0.5;
 }
 
 /* Boxes */
@@ -25,6 +30,7 @@ body {
   padding: 0 20px;
   min-width: 980px;
   max-width: 1400px;
+  line-height: 1.5;
 }
 
 /* Layout */
@@ -34,6 +40,7 @@ main {
   grid-template-columns: 5fr 2fr 2fr;
   gap: 40px;
   padding: 20px 0;
+  text-indent: 2rem;
 }
 
 /* header and footer */

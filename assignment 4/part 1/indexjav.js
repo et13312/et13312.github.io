@@ -9,7 +9,8 @@ function randomValueFromArray(array) {
   return array[random];
 }
 
-const storyText = "It was 94 Fahrenheit outside, so :randomCharacter: went for a walk. When they got to :randomPlace:, they stared in horror for a few moments, then :randomEvent:. Bob saw the whole thing, but was not surprised — :randomCharacter: weighs 300 pounds, and it was a hot day. Event listener and partial generate function definition"
+
+const storyText = "It was 94 Fahrenheit outside, so :randomCharacter: went for a walk. When they got to :randomPlace:, they stared in horror for a few moments, then :randomEvent:. Bob saw the whole thing, but was not surprised — :randomCharacter: weighs 300 pounds, and it was a hot day."
 const characters = ["Willy the Goblin", "Big Daddy", "Father Christmas"]
 const places = ["The Soup Kitchen", "Disneyland", "The White House"]
 const events= ["spontaneously combusted", "melted into a puddle on the sidewalk"]
@@ -19,16 +20,22 @@ const randomCharacter = randomValueFromArray(characters);
 const randomPlace = randomValueFromArray(places);
 const randomEvent = randomValueFromArray(events);
 
-  return storyText;
+newStory = newStory
+ .replaceAll (":randomCharacter:", randomCharacter)
+ .replace(":randomPlace:", randomPlace)
+ .replace(":randomEvent:", randomEvent)
 }
 // It was 94 Fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.
 // Event listener and partial generate function definition
+
+let newStory = returnRandomStoryString
 
 generateBtn.addEventListener("click", generateStory);
 
 function generateStory() {
   if (customName.value !== "") {
     const name = customName.value;
+  newStory = newStory.replace("Bob",name)
   }
 
   if (document.getElementById("uk").checked) {

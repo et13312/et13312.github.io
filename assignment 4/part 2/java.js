@@ -5,7 +5,7 @@ const thumbBar = document.querySelector(".thumb-bar");
 
 const btn = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
-
+const baseURL = 'https://github.com/et13312/et13312.github.io/tree/59c9185de2cd433363a747c9f6674fee5d778fb7/assignment%204/part%202/images';
 
 const images = [
 {filename: "pic1.jpg",alt: "Closeup of a human eye." },
@@ -16,3 +16,15 @@ const images = [
 ]
 
 
+for (const image of images)
+{
+const newImage = document.createElement('img')
+newImage.setAttribute('src', baseURL + image.filename);
+newImage.setAttribute ('alt', image.alt);
+thumbBar.appendChild(newImage);
+newImage.addEventListener('click',e => {
+displayedImage.src = e.target.src
+displayedImage.alt = e.target.alt
+}
+);
+}

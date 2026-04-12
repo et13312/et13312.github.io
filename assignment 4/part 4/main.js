@@ -29,12 +29,7 @@ class Shape {
 
 class Ball extends Shape {
   constructor(x, y, velX, velY, color, size) {
-    this.x = x;
-    this.y = y;
-    this.velX = velX;
-    this.velY = velY;
-    this.color = color;
-    this.size = size;
+    super(x, y, velX, velY);
   }
 }
 class EvilCircle extends Shape {
@@ -68,6 +63,16 @@ class EvilCircle extends Shape {
     ctx.fill();
   }
 
+  
+  draw() {
+    ctx.beginPath();
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.stroke();
+  }
+
+
  update() {
     if (this.x + this.size >= width) {
       this.velX = -this.velX;
@@ -87,6 +92,21 @@ class EvilCircle extends Shape {
 
     this.x += this.velX;
     this.y += this.velY;
+    
+  }
+
+   update() {
+    if (this.x + this.size >= width) {
+      this.velX -= -this.velX;
+    }
+
+    if (this.x - this.size <= 0) {
+      this.velX =+ -this.velX;
+    }
+
+    if (this.y + this.size >= height) {
+      this.velY -= -this.velY;
+    }
     
   }
   

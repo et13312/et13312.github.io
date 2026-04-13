@@ -31,7 +31,50 @@ class Ball extends Shape {
   constructor(x, y, velX, velY, color, size) {
     super(x, y, velX, velY);
   }
-}
+
+    draw() {
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.fill();
+    }
+
+     update() {
+    if (this.x + this.size >= width) {
+      this.velX = -this.velX;
+    }
+
+    if (this.x - this.size <= 0) {
+      this.velX = -this.velX;
+    }
+
+    if (this.y + this.size >= height) {
+      this.velY = -this.velY;
+    }
+
+    if (this.y - this.size <= 0) {
+      this.velY = -this.velY;
+    }
+
+    this.x += this.velX;
+    this.y += this.velY;
+  }
+
+    collisionDetect() {
+    for (const ball of balls) {
+      if (!(this === ball) && ball.exists) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < this.size + ball.size) {
+          ball.color = this.color = randomRGB();
+        }
+      }
+    }
+  }
+  }
+
 class EvilCircle extends Shape {
   constructor(x, y) {
   super(x, y, 20, 20)
@@ -55,15 +98,6 @@ class EvilCircle extends Shape {
   }
 });
 }
-
-  draw() {
-    ctx.beginPath();
-    ctx.fillStyle = this.color;
-    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-    ctx.fill();
-  }
-
-  
   draw() {
     ctx.beginPath();
     ctx.lineWidth = 3;
@@ -71,30 +105,6 @@ class EvilCircle extends Shape {
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
   }
-
-
- update() {
-    if (this.x + this.size >= width) {
-      this.velX = -this.velX;
-    }
-
-    if (this.x - this.size <= 0) {
-      this.velX = -this.velX;
-    }
-
-    if (this.y + this.size >= height) {
-      this.velY = -this.velY;
-    }
-
-    if (this.y - this.size <= 0) {
-      this.velY = -this.velY;
-    }
-
-    this.x += this.velX;
-    this.y += this.velY;
-    
-  }
-
    update() {
     if (this.x + this.size >= width) {
       this.velX -= -this.velX;
@@ -112,21 +122,7 @@ class EvilCircle extends Shape {
     }
     
   }
-  
-  collisionDetect() {
-    for (const ball of balls) {
-      if (!(this === ball) && ball.exists) {
-        const dx = this.x - ball.x;
-        const dy = this.y - ball.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-
-        if (distance < this.size + ball.size) {
-          ball.color = this.color = randomRGB();
-        }
-      }
-    }
-  }
-    
+      
   collisionDetect() {
     for (const ball of balls) {
       if (ball.exists) {
@@ -140,8 +136,11 @@ class EvilCircle extends Shape {
       }
     }
 }
+}
 
 
+
+const balls = [];
 
 
 while (balls.length < 25) {
@@ -161,6 +160,7 @@ while (balls.length < 25) {
 }
 
 
+var EvilCir = new EvilCircle 
 
 function loop() {
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
@@ -173,11 +173,9 @@ function loop() {
 
     
   }
-    var = EvilCir = new EvilCircle{
     EvilCircle.draw();
     EvilCircle.checkbounds();
     EvilCircle.collisionDetect();
-  }
 
   requestAnimationFrame(loop);
 }

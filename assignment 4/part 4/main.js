@@ -1,3 +1,9 @@
+// Name: Ethan Fuerth //
+// File: main.html //
+// Date: 11 April 2026 //
+// My attempt at MDN's "Adding features to our bouncing balls demo". --> //
+
+
 // setup canvas
 
 const canvas = document.querySelector("canvas");

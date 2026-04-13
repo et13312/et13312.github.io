@@ -1,3 +1,8 @@
+// Name: Ethan Fuerth //
+// File: java.js //
+// Date: 3 April 2026 //
+// My attempt at MDN's "Image Gallery" Challange. --> //
+
 
 
 const displayedImage = document.querySelector(".displayed-img");

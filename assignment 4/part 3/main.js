@@ -1,3 +1,10 @@
+// Name: Ethan Fuerth //
+// File: main.html //
+// Date: 10 April 2026 //
+// My attempt at MDN's "Object building practice" challange. --> //
+
+
+
 // setup canvas
 
 const canvas = document.querySelector("canvas");

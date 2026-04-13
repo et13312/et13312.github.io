@@ -107,6 +107,9 @@ class EvilCircle extends Shape {
     if (this.y + this.size >= height) {
       this.velY -= -this.velY;
     }
+      if (this.y - this.size <= 0) {
+      this.velY =+ -this.velY;
+    }
     
   }
   
@@ -123,9 +126,23 @@ class EvilCircle extends Shape {
       }
     }
   }
+    
+  collisionDetect() {
+    for (const ball of balls) {
+      if (ball.exists) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < this.size + ball.size) {
+          ball.exists = false;
+        }
+      }
+    }
 }
 
-const balls = [];
+
+
 
 while (balls.length < 25) {
   const size = random(10, 20);
@@ -143,6 +160,8 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
+
+
 function loop() {
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
@@ -151,6 +170,13 @@ function loop() {
     ball.draw();
     ball.update();
     ball.collisionDetect();
+
+    
+  }
+    var = EvilCir = new EvilCircle{
+    EvilCircle.draw();
+    EvilCircle.checkbounds();
+    EvilCircle.collisionDetect();
   }
 
   requestAnimationFrame(loop);

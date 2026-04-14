@@ -23,31 +23,38 @@ My attempt at MDNs "Structuring a feedback form". HTML template from website.. -
     to win prizes.
    </body>
     --
-
+    <div class="form-selection"></div>
     <h2>Facilities</h2>
 
+    <div class="separator">
    <legend> Was the porridge? </legend>
     <input type="radio" name="porridge"value="hot" checked> Too hot?
     <input type="radio" name="porridge" value="cold"> Too cold?
     <input type="radio" name="porridge" value="right"> Just right?
+    </div>
 
-
+    <div class="separator">
     <legend> Were the beds? </legend>
    <input type="radio" name="beds" value="hard"> Too hard?
    <input type="radio" name="beds" value="soft"> Too soft?
    <input type="radio" name="beds" value="right-2"> Just right?
+    </div>
 
-    <legend> the chairs (select all you agree with) </legend>
+    <div class="separator">
+    <legend> Describe the chairs (select all you agree with) </legend>
      <input type="checkbox" name="chairs" value="comfy"> Comfy
      <input type="checkbox" name="chairs" value="luxurious"> Luxurious
      <input type="checkbox" name="chairs" value="hi-tec"> Hi tec
      <input type="checkbox" name="chairs" value="pretty"> Pretty
      <input type="checkbox" name="chairs" value="Majestic"> Majestic
+    </div>
 
+     </div>
     --
-
+    <div class="form-selection">
     <h2>About your hosts</h2>
     
+      <div class="separator">
     <label for = "fav-bear">Who's your favorite bear?</label>
     <select name ="bears" id="fav-bear">
 
@@ -56,7 +63,10 @@ My attempt at MDNs "Structuring a feedback form". HTML template from website.. -
      <option value="junior"> Junior </option>
      <option value="dozer"> Dozer </option>
     </select>
+    </div>
 
+
+    <div class="separator">
      <label for = "greeting">Which greeting did you prefer?</label> 
      <select name ="greet" id="greeting">
     
@@ -64,28 +74,51 @@ My attempt at MDNs "Structuring a feedback form". HTML template from website.. -
         <option value="friendly">Friendly greeting</option>
         <option value = "growl"> Growl </option>
         <option value = "claw">Claw marks in the door</option>
-    </select>
-    --
+    </select> 
+    </div>
 
+    </div>
+
+    --
+    <div class="form-selection">
     <h2> Any other feedback? </h2>
-
+    <break>
     <textarea id ="comments" name="comments" Give us your comments ></textarea>
+    </break>
+    </div>
 
-    --
+
+    <div class="form-selection"> 
 
     <h2>Your details</h2>
 
+    <div class="separator">
     <label for = "name">Name</label>
+    </div>
+
+     <div class="separator">
     <input type = "name" id="name" name="name"
+    </div>
+
+    <div class="separator">
     <label for = "email">Email</label>
+    </div>
+
+    <div class="separator">
     <input type = "email" id="email" name="email"
+    </div>
+
+   <div class="separator">
     <label for = "Phone">Phone</label>
     <input type = "phone" id="phone" name="phone"
+    </div>
 
-    --
+    </div>
 
+
+    <div class="form-selection">
     <button type = "submit">Submit</button>
+    </div>
 
-    --
   </body>
 </html>

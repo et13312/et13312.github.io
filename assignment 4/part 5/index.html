@@ -13,22 +13,27 @@ My attempt at MDNs "Structuring a feedback form". HTML template from website.. -
     <link href="style.css" rel="stylesheet" />
     <script defer src="index.js"></script>
   </head>
-  
+    
+   <body>
    <h1> We want your feedback! </h1>
-    <body>
     We're very excited that you visited the <a href="#">little house</a> in the woods,
     and we want to hear what you thought of it! Please fill in the below
     sections. You don't need to provide your name or contact details, but if you do, we'll enter you into a <a href="#">prize draw</a> where you'll have a chance to win prizes.
+<img src = "https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg" alt = " ">
    </body>
     
-   <img src = "https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg" alt = " ">
-   
-    <div class="form-selection"></div>
-    <h2>Facilities</h2>
 
+   
+   <form>
+    
+
+    <div class="form-section">
+    <h2>Facilities</h2>
+    
     <div class="separator">
+    <fieldset>
    <legend> Was the porridge? </legend>
-    <input type="radio" name="porridge"value="hot" checked> Too hot?
+    <input type="radio" name="porridge" value="hot" checked> Too hot?
     <input type="radio" name="porridge" value="cold"> Too cold?
     <input type="radio" name="porridge" value="right"> Just right?
     </div>
@@ -50,8 +55,10 @@ My attempt at MDNs "Structuring a feedback form". HTML template from website.. -
     </div>
 
      </div>
+    </fieldset>
 
-    <div class="form-selection">
+
+    <div class="form-section">
     <h2>About your hosts</h2>
     
       <div class="separator">
@@ -80,44 +87,41 @@ My attempt at MDNs "Structuring a feedback form". HTML template from website.. -
     </div>
 
 
-    <div class="form-selection">
+
+    <div class="form-section">
     <h2> Any other feedback? </h2>
-    <break>
-    <textarea id ="comments" name="comments" Give us your comments ></textarea>
+    <br>
+    <textarea id="comments" name="comments"> Give us your comments </textarea>
+
     </div>
 
 
-    <div class="form-selection"> 
+    <div class="form-section"> 
 
     <h2>Your details</h2>
 
     <div class="separator">
     <label for = "name">Name</label>
-    </div>
-
-     <div class="separator">
-    <input type = "name" id="name" name="name"
+    <input type = "nam3" id="name" name="name">
     </div>
 
     <div class="separator">
     <label for = "email">Email</label>
-    </div>
-
-    <div class="separator">
-    <input type = "email" id="email" name="email"
+    <input type = "mail" id="email" name="email">
     </div>
 
    <div class="separator">
-    <label for = "Phone">Phone</label>
-    <input type = "phone" id="phone" name="phone"
+    <label for = "phone">Phone</label>
+    <input type = "tel" id="phone" name="phone">
     </div>
 
     </div>
 
 
-    <div class="form-selection">
+    <div class="form-section">
     <button type = "submit">Submit</button>
     </div>
 
+  </form>
   </body>
 </html>

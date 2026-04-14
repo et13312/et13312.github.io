@@ -13,9 +13,9 @@ My attempt at MDNs "Structuring a feedback form". HTML template from website.. -
     <link href="style.css" rel="stylesheet" />
     <script defer src="index.js"></script>
   </head>
-  <body>
-    We want your feedback!
-
+  
+   <h1> We want your feedback! </h1>
+    <body>
     We're very excited that you visited the little house in the woods,
     and we want to hear what you thought of it! Please fill in the below
     sections. You don't need to provide your name or contact details, but
@@ -27,7 +27,7 @@ My attempt at MDNs "Structuring a feedback form". HTML template from website.. -
     <h2>Facilities</h2>
 
    <legend> Was the porridge? </legend>
-    <input type="radio" name="porridge" value="hot"> Too hot?
+    <input type="radio" name="porridge"value="hot" checked> Too hot?
     <input type="radio" name="porridge" value="cold"> Too cold?
     <input type="radio" name="porridge" value="right"> Just right?
 
@@ -46,20 +46,25 @@ My attempt at MDNs "Structuring a feedback form". HTML template from website.. -
 
     --
 
-    About your hosts
+    <h2>About your hosts</h2>
+    
+    <label for = "fav-bear">Who's your favorite bear?</label>
+    <select name ="bears" id="fav-bear">
 
-    Who's your favorite bear?
-    Papa bear
-    Mama bear
-    Junior
-    Dozer
+     <option value="papa"> Papa bear </option>
+     <option value="mama"> Mama bear </option>
+     <option value="junior"> Junior </option>
+     <option value="dozer"> Dozer </option>
+    </select>
 
-    Which greeting did you prefer?
-    Wave
-    Friendly greeting
-    Growl
-    Claw marks in the door
-
+     <label for = "greeting">Which greeting did you prefer?</label> 
+     <select name ="greet" id="greeting">
+    
+        <option value="wave"> Wave </option>
+        <option value="friendly">Friendly greeting</option>
+        <option value = "growl"> Growl </option>
+        <option value = "claw">Claw marks in the door</option>
+    </select>
     --
 
     Any other feedback?
